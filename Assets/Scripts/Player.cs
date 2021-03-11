@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
-
-
+    
+    
+    
     public Vector3 pointToLook;
 
     private float X_axis;
@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     float Angle;
     Rigidbody rbcomponent;
     [SerializeField] Transform target;
-    [SerializeField] public int tool = 0;
     
     private Camera mainCamera;
     
@@ -41,20 +40,6 @@ public class Player : MonoBehaviour
         {
             pointToLook = cameraRay.GetPoint(rayLength);
             
-        }
-        if(Input.GetKeyDown(KeyCode.Alpha1)){
-            tool = 1;
-            Debug.Log("Tool 1");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            tool = 2;
-            Debug.Log("Tool 2");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            tool = 3;
-            Debug.Log("Tool 3");
         }
     }
 
